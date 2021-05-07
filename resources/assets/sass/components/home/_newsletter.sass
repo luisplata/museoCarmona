@@ -1,0 +1,127 @@
+.sectionNewsletterHome
+    width: 100%
+    background: $color-sexto
+    .rowOne
+        width: 100%
+        margin: 0% !important
+        padding: 0% !important
+        position: relative
+        .col
+            margin: 0% !important
+            padding: 0% !important
+        .text
+            padding: 15% 20%
+            @media screen and (max-width: 600px)
+                padding: 10% 5%
+            h1
+                margin: 0%
+                text-align: center
+                font-size: 35px
+                font-weight: 500
+                color: $color-secundario
+                span
+                    font-weight: 700
+                    font-style: italic
+            h2
+                margin: 8% 0%
+                text-align: center
+                font-size: 13px
+                font-weight: 300
+                color: $color-secundario
+                @media screen and (max-width: 600px)
+                    font-size: 15px
+                    text-align: justify
+            .row
+                width: 100%
+                margin: 0% !important
+                input
+                    height: 40px
+                    line-height: 40px
+                    width: 100%
+                    text-indent: 10px
+                    background: transparent
+                    color: $color-terciario
+                    font-weight: 400
+                    border-radius: 0px
+                    margin: 0% 0%
+                    border: 1px solid $color-secundario
+                    &::placeholder
+                        color: $color-terciario
+                        opacity: 1
+                        font-weight: 400
+                    &:focus
+                        border-bottom: 1px solid $color-secundario !important
+                        -webkit-box-shadow: none !important
+                        box-shadow: none !important
+                .error
+                    border: 1px solid red !important
+                    &:focus
+                        border-bottom: 1px solid red !important
+                .btn
+                    width: 100%
+                    padding: 0% 12%
+                    margin: 0% 0%
+                    background: $color-principal
+                    color: $color-cuarto
+                    font-size: 16px
+                    text-transform: inherit
+                    box-shadow: none
+                    -webkit-box-shadow: none
+                    -moz-box-shadow: none
+                    border-radius: 0px
+                    border: 1px solid $color-principal
+                    font-weight: 700
+                    height: 45px
+                    line-height: 45px
+                    top: -2px
+        .container-map
+            padding: 0% 0% !important
+            position: absolute
+            width: 50%
+            right: 0%
+            height: 100%
+            @media screen and (max-width: 600px)
+                position: relative
+                width: 100%
+        .containerMap
+            position: relative
+            height: 100%
+            min-height: 200px
+            padding-bottom: 0%
+            @media screen and (min-width: 1600px)
+                height: 45vh
+            @media screen and (max-width: 991px)
+                padding-bottom: 0%
+                height: 50vh
+            .gm-style-iw-t
+                bottom: -15px !important
+            #gmimap0
+                visibility: hidden
+            .gm-style .gm-style-iw-c
+                background-color: transparent !important
+                box-shadow: none
+                //sborder-radius: 100%
+                padding: 0px
+                margin-top: 2px
+            .gm-style-iw-t::before
+                border-top: 12px solid transparent
+            .gm-style .gm-style-iw-t::after
+                border-top: 11px solid transparent
+            .gm-style-iw-d
+                overflow: hidden !important
+                img
+                    margin: 0px
+                    @media screen and (max-width: 600px)
+                        width: 65pt !important
+            .gm-style .gm-style-iw-t::after
+                background: transparent
+                box-shadow: none
+            #map
+                border-radius: 0px
+                width: 100%
+                position: absolute
+                overflow: hidden
+                height: 100%
+                @media screen and (max-width: 600px)
+                    margin-left: initial
+                    width: 100%

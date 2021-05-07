@@ -1,0 +1,13 @@
+CREATE TABLE `works` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `img` varchar(100) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+  `details` text COLLATE utf8mb4_spanish2_ci,
+  `place` text COLLATE utf8mb4_spanish2_ci,
+  `city` varchar(100) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+  `country` varchar(100) COLLATE utf8mb4_spanish2_ci DEFAULT NULL,
+  `status` varchar(10) COLLATE utf8mb4_spanish2_ci DEFAULT 'activo',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+INSERT INTO `works` (`id`, `img`, `details`, `place`, `city`, `country`, `status`, `created_at`, `updated_at`) VALUES (1,'uploads/1/2020-10/work_1.jpg','* Dieciocho (18) Obras Monumentales Figurativas y Cuatro (4) Obras Monumentales Abstractas instaladas en el Centro de la Ciudad','Centro de la ciudad','Estados unidos','Fort Meyers (Florida)','activo','2020-10-08 02:09:52',NULL),(5,'uploads/2/2020-10/plaza_san_pedro_claver_4.jpg','* Plaza de San Pedro – Centro Histórico – Año 1.999 – Once (11) Esculturas (declaradas patrimonio cultural, por el Ministerio de Cultura de Colombia)\r\n* Nuevo Edificio de la Gobernación de Bolívar - Escultura Monumental Abstracta de 7.6 mts de alto, denominada “GOBERNANZA”\r\n* Universidad Tecnológica de Bolívar - Escultura Monumental Abstracta, denominada “PALMERA REAL”\r\n* San Lázaro Distrito Arte - Escultura Monumental Abstracta, denominada “SOMBRERO VUELTIAO\r\n* Clínica Ebenezer - Escultura Monumental Abstracta, denominada “OCULUM”\r\n* Astilleros Cotecmar – Escultura Monumental Abstracta de 6.3 mts de alto, denominada “OPORTUNIDADES”','Plaza de San Pedro','Cartagena (Bolivar)','Colombia','activo','2020-10-20 08:14:51',NULL),(6,'uploads/2/2020-10/edgardo_carmona_giessen_don_quijote_023.jpg','* Escultura Monumental Figurativa, “QUIJOTE”','Plaza Central de la Ciudad','Geissen','Alemania','activo','2020-10-20 08:15:45',NULL),(7,'uploads/2/2020-10/burghausen_triologo.jpg','* Escultura Monumental Figurativa, “TRIÁLOGO”','Plaza del Gobierno','Burghousen','Alemania','activo','2020-10-20 08:16:25',NULL),(8,'uploads/2/2020-10/edgardo_carmona_skulpturenausstellung_salzgitter_2008_012.jpg','* Dos (2) Esculturas Monumentales Figurativas, “AL GALOPE y QUIJOTE”','Museo de Arte  \r\nde la Ciudad','Salzgitter','Alemania','activo','2020-10-20 08:17:01',NULL),(9,'uploads/2/2020-10/edgardo_carmona_territorios_008_0.jpg','* Escultura Monumental Figurativa, “TERRITORIOS”','A la entrada \r\nde la ciudad','Hohenstein','Alemania','activo','2020-10-20 08:17:45',NULL);

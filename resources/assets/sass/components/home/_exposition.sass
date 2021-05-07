@@ -1,0 +1,180 @@
+.sectionExpositionHome
+    width: 100%
+    padding: 4% 0%
+    padding-top: 0%
+    background: $color-sexto
+    @media screen and (max-width: 600px)
+        padding-bottom: 10%
+    h1
+        width: 100%
+        margin: 0%
+        padding: 3% 0%
+        text-align: center
+        background: $color-ocho
+        color: $color-sexto
+        font-size: 40px
+        font-weight: 500
+        margin-bottom: 3%
+        @media screen and (max-width: 600px)
+            padding: 8% 0%
+            font-size: 30px
+        span
+            font-weight: 700
+            font-style: italic
+    .rowOne
+        width: 90%
+        margin-bottom: 0%
+        select
+            width: 100%
+            text-align: center
+            border: 1px solid $color-principal
+            color: $color-secundario
+            font-size: 18px
+            font-weight: 700
+            text-align-last: center
+            display: none
+            @media screen and (max-width: 600px)
+                display: block
+        .rowOcult
+            @media screen and (max-width: 600px)
+                display: none !important
+        .row_2
+            width: 100%
+            display: -webkit-box
+            display: -ms-flexbox
+            display: flex
+            -ms-flex-wrap: wrap
+            flex-wrap: wrap
+            justify-content: center
+            .col
+                float: initial
+                flex-basis: 0
+                -webkit-box-flex: 1
+                -ms-flex-positive: 1
+                flex-grow: 1
+                margin-left: initial
+            .column
+                margin: 0%
+                font-size: 25px
+                font-weight: 500
+                color: $color-secundario
+                -webkit-box-flex: 0
+                -ms-flex: 0 0 40%
+                flex: 0 0 40%
+                text-align: center
+                span
+                    font-weight: 700
+                    font-style: italic
+                hr
+                    visibility: hidden
+                    width: 50%
+                    height: 3px
+                    background: $color-principal
+                    border: none
+                    margin: auto
+                    margin-top: 10px
+                &:hover
+                    cursor: pointer
+            .active
+                hr
+                    visibility: inherit
+        .notProductos
+            margin-top: 2%
+            text-align: center
+            width: 100%
+            padding: 0% 13%
+            h6
+                font-size: 19px
+                text-transform: uppercase
+                color: $color-principal
+                text-align: center
+            .progress
+                background-color: $color-terciario
+                height: 7px
+                .indeterminate
+                    background: $color-principal
+        .sliderExpositions
+            margin-top: 2%
+            width: 100%
+            margin-bottom: 0%
+            .slick-dots
+                bottom: -5%
+                @media screen and (max-width: 600px)
+                    bottom: -3%
+                li
+                    margin: 0px 10px
+                    @media screen and (max-width: 600px)
+                        margin: 0px 5px
+                li button:before
+                    font-size: 60px
+                    opacity: 1
+                    color: $color-principal
+                li.slick-active button:before
+                    font-size: 60px
+                    opacity: 1
+                    color: $color-secundario
+            table
+                margin: 2% 0%
+                width: 100%
+                th,td
+                    width: 33.3333333% !important
+                    @media screen and (max-width: 600px)
+                        width: 100% !important
+                        display: block
+                        padding: 0px !important
+                thead
+                    @media screen and (max-width: 600px)
+                        display: none
+                    tr
+                        border: none
+                        th
+                            text-align: center
+                            font-size: 20px
+                            font-weight: 700
+                            color: $color-secundario
+                tbody
+                    .ocult
+                        @media screen and (max-width: 600px)
+                            display: none
+                    tr
+                        border: none
+                        @media screen and (max-width: 600px)
+                            border-bottom: 1px solid $color-nueve
+                    h3
+                        margin: 1% 0%
+                        text-align: center
+                        font-size: 60px
+                        font-weight: 700
+                        font-style: italic
+                        color: $color-secundario
+                        @media screen and (max-width: 600px)
+                            font-size: 40px
+                    h2
+                        margin: 0% 0%
+                        margin-top: 3%
+                        height: 35px
+                        line-height: initial
+                        letter-spacing: 0px
+                        text-align: left
+                        padding-left: 20%
+                        font-size: 18px
+                        font-weight: 500
+                        color: $color-secundario
+                        @media screen and (max-width: 600px)
+                            height: auto
+                            padding-left: 0%
+                            text-align: center
+                            margin: 4% 0%
+                        span
+                            font-weight: 700
+                            font-style: italic
+                            @media screen and (max-width: 600px)
+                                font-weight: 500
+                        span2
+                            display: none
+                            @media screen and (max-width: 600px)
+                                display: block
+                        .span2
+                            @media screen and (max-width: 600px)
+                                font-weight: 700
+                                text-transform: uppercase

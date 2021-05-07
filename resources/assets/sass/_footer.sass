@@ -1,0 +1,131 @@
+.sectionFooter
+    width: 100%
+    background: $color-secundario
+    padding: 4% 0%
+    @media screen and (max-width: 600px)
+        padding-top: 10%
+    .row
+        width: 90%
+        padding: 0% 10%
+        padding-left: 0%
+        padding-bottom: 2%
+        margin-bottom: 2%
+        border-bottom: 1px solid $color-sexto
+        @media screen and (max-width: 600px)
+            text-align: center
+            width: 100%
+            padding: 0%
+        .logo
+            width: 100%
+            position: relative
+            top: -20px
+            @media screen and (max-width: 600px)
+                width: 80%
+        h1
+            height: 35px
+            line-height: 35px
+            margin: 0%
+            font-size: 18px
+            font-weight: 700
+            color: $color-cuarto
+            @media screen and (max-width: 600px)
+                font-size: 20px
+                height: auto
+                line-height: initial
+                margin: 2% 0%
+            &:hover
+                cursor: pointer
+    .row
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -ms-flex-wrap: wrap
+        flex-wrap: wrap
+        justify-content: center
+        position: relative
+        .arrow
+            position: absolute
+            width: 50pt
+            right: 3%
+            bottom: -30%
+            @media screen and (max-width: 600px)
+                display: none
+            &:hover
+                cursor: pointer
+        .col
+            float: initial
+            flex-basis: 0
+            -webkit-box-flex: 1
+            -ms-flex-positive: 1
+            flex-grow: 1
+            margin-left: initial
+        .column
+            -webkit-box-flex: 0
+            -ms-flex: 0 0 20%
+            flex: 0 0 20%
+            @media screen and (max-width: 600px)
+                -ms-flex: 0 0 100%
+                flex: 0 0 100%
+        .medium
+            -webkit-box-flex: 0
+            -ms-flex: 0 0 13.3333333%
+            flex: 0 0 13.3333333%
+            @media screen and (max-width: 600px)
+                -ms-flex: 0 0 100%
+                flex: 0 0 100%
+            .redes
+                width: 100%
+                text-align: center
+                @media screen and (max-width: 600px)
+                    padding: 4% 0%
+                img
+                    width: auto
+                    margin: 0px 20px
+
+.phone-float
+  border: 1px solid #ffffff
+  position: fixed
+  right: 1%
+  bottom: 11%
+  background: $orange
+  padding: 0.8% 0.8%
+  border-radius: 50px
+  z-index: 100000
+  -webkit-box-shadow: 10px 10px 19px -6px rgba(0,0,0,0.19)
+  -moz-box-shadow: 10px 10px 19px -6px rgba(0,0,0,0.19)
+  box-shadow: 10px 10px 19px -6px rgba(0,0,0,0.19)
+  @media screen and (max-width: 991px)
+    padding: 1.5%
+  @media screen and (max-width: 600px)
+    right: 1%
+    bottom: 12%
+    padding: 2.8% 2.8%
+  &:hover
+    //background: $color-principal
+    cursor: pointer
+  img
+    width: 20pt
+
+.wp-float-desktop
+  border: 1px solid #ffffff
+  position: fixed
+  right: 1%
+  bottom: 3%
+  background: #25D366
+  padding: 0.8% 0.8%
+  border-radius: 50px
+  z-index: 100000
+  -webkit-box-shadow: 10px 10px 19px -6px rgba(0,0,0,0.19)
+  -moz-box-shadow: 10px 10px 19px -6px rgba(0,0,0,0.19)
+  box-shadow: 10px 10px 19px -6px rgba(0,0,0,0.19)
+  @media screen and (max-width: 991px)
+    padding: 1.5%
+  @media screen and (max-width: 600px)
+    right: 1%
+    bottom: 3%
+    padding: 2.8% 2.8%
+  &:hover
+    background: #25D366
+    cursor: pointer
+  img
+    width: 20pt
