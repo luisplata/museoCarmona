@@ -28,7 +28,7 @@ class ViewsController extends Controller
         $webInfo = WebInfo::all();
         $imageSculpture = ImageSculptures::where('status','activo')->get();
         $services = Services::where('status','activo')->get();
-        $categoryProjects = CategoryProjects::where('status','activo')->orderBy('order','desc')->get();
+        $categoryProjects = CategoryProjects::where('status','activo')->orderBy('order','asc')->get();
         $projects = Projects::where('status','activo')
             ->where('category_projects_id',$categoryProjects[0]->id)
             ->orderBy('position','asc')
