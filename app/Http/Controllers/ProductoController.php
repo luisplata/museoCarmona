@@ -157,16 +157,18 @@ class ProductoController extends Controller {
     public function destroy($id) {
         //eliminamos el producto y los mandamos a la verga! :v
         try {
-            $producto = \App\Producto::find($id);
-            Storage::delete([public_path().$producto->imagen]);
+            $producto = Producto::find($id);
             if ($producto->delete()) {
                 //eliminamos el archivo
-                return redirect("admin/producto?mensaje=Se guardo el producto&tipo=success");
+                $split = explode("/",$producto->img);
+                $path = storage_path("app/public/".$split[1]);
+                unlink($path);
+                return redirect("admin/producto?mensaje=Se elimino con exito el producto&tipo=success");
             } else {
-                return redirect("admin/producto?mensaje=No se guardo el producto&tipo=warining");
+                return redirect("admin/producto?mensaje=No elimino con exito el producto&tipo=warining");
             }
         } catch (\Exception $ex) {
-            dd($ex);
+            //dd();
             return redirect("admin/producto?mensaje=Error&tipo=error");
         }
     }
