@@ -39,7 +39,7 @@ class ProductoController extends Controller {
         );
         return view("admin.producto.create", $datos);
     }
-    
+
     /**
      * Store a newly created resource in storage.
      *
@@ -119,14 +119,23 @@ class ProductoController extends Controller {
         //buscamos el producto
         try {
             $producto = \App\Producto::find($id);
-            $producto->nombre = $request->nombre;
-            $producto->imagen = $request->imagen;
-            $producto->categorias_id = $request->categoria_id;
-            $producto->nombreLink = $request->nombreLink;
-            $producto->hotLink = $request->hotLink;
-            $producto->publication_date = $request->publication_date;
-            $producto->isVideo = $request->isVideo;
-            $producto->url_video = $request->url_video;
+
+            $producto->category_projects_id = $request->category_id;
+            $producto->title = $request->title;
+            $producto->subtitle = $request->subtitle;
+            $producto->year = $request->year;
+            $producto->medida = $request->medida;
+            $producto->position = $request->position;
+
+            if($request->hasFile('pintura')){
+                $fileUpdate = $request->file("pintura");
+                $directory = Storage::putFile('public', new File($fileUpdate));
+                $directorySubString = explode("/",$directory); 
+                $nameOfFile = 'storage/'.$directorySubString[1];
+
+                $producto->img = $nameOfFile;
+                $producto->modal = $nameOfFile;
+            }
             
             if ($producto->save()) {
                 return redirect("admin/producto?mensaje=Se modifico el producto con exito&tipo=success");

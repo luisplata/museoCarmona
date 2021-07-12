@@ -28,7 +28,7 @@
                 <td>{{$producto->categoria->name}}</td>
                 <th>{{$producto->year}}</th>
                 <th>{{$producto->medida}}</th>
-                <td onclick="OpenInPopUpImage('{{$producto->img}}')"> <span class="btn btn-default">Click Para Ver</span></td>
+                <td onclick="OpenInPopUpImage('{{asset($producto->img)}}')"> <span class="btn btn-default">Click Para Ver Imagen</span></td>
                 <td><a class="btn btn-primary" href="{{url("admin/producto/$producto->id/edit")}}"><i class="fa fa-edit"></i> Editar</a></td>
                 <td>{{Form::open(["url"=>"admin/producto/$producto->id","method"=>"DELETE"])}}
                     <button type="submit" class="btn btn-primary"><i class="fa fa-ellipsis-h"></i> Eliminar</button>
@@ -49,7 +49,7 @@
     } );
 
     function OpenInPopUpImage(imagen){
-        window.open('{{asset("/")}}'+imagen,imagen,'height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+        window.open(imagen,imagen,'height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
     }
 </script>
 @endsection
