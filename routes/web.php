@@ -15,3 +15,27 @@ Route::get('/','ViewsController@home')->name('home');
 Route::post('getGalery', 'ViewsController@GetGalery');
 Route::post('getExpositions', 'ViewsController@GetExpositions');
 Route::post('newsletter','ViewsController@Newsletter');
+
+//code for login
+
+Route::get("/login", function () {
+    return view("login");
+});
+Route::get("/logout", function () {
+    session()->flush();
+    return redirect("/login");
+});
+Route::post("/login", "LoginController@login");
+
+Route::middleware('logeado')->group(function () {
+    //para el admin
+    Route::prefix('admin')->group(function () {
+        
+        Route::get("producto/upload", "ProductoController@Upload");
+        Route::post("producto/uploadFile", "ProductoController@UploadFile")->name('admin.producto.uploadFile');;
+        Route::resource("categoria", "CategoriaController");
+        Route::resource("producto", "ProductoController");
+        Route::resource("graficas", "GraficaController");
+    });
+    Route::resource("admin", "AdminController");
+});
