@@ -37,5 +37,3 @@ Route::middleware('logeado')->group(function () {
     });
     Route::resource("admin", "AdminController");
 });
-
-Route::get("images/{nombre?}", "ProductoController@MostrarImagen");

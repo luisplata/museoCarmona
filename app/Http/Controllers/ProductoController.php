@@ -128,6 +128,10 @@ class ProductoController extends Controller {
             $producto->position = $request->position;
 
             if($request->hasFile('pintura')){
+                $split = explode("/",$producto->img);
+                $path = storage_path("app/public/".$split[1]);
+                unlink($path);
+
                 $fileUpdate = $request->file("pintura");
                 $directory = Storage::putFile('public', new File($fileUpdate));
                 $directorySubString = explode("/",$directory); 
