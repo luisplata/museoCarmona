@@ -17,7 +17,7 @@ class CategoriaController extends Controller {
         //buscamos todos las categorias para listarlas
 
         $datos = array(
-            "categorias" => Categoria::all()
+            "categorias" => Categoria::orderby("order")->get()
         );
         //dd($datos);
         return view("admin.categoria.dashboard", $datos);
@@ -47,15 +47,14 @@ class CategoriaController extends Controller {
         try {
             //creamos al administrador
             $categoria = new \App\Categoria();
-            $categoria->nombre = $request->nombre;
-            $categoria->descripcion = $request->descripcion;
-            $categoria->padre = $request->padre;
+            $categoria->name = $request->nombre;
+            $categoria->order = 100;
             if (!$categoria->save()) {
                 return redirect("admin/categoria/create?mensaje=Ocurrio un error al crear la categoria&tipo=error");
             }
             return redirect("admin/categoria?mensaje=Se creo correctamente la categoria&tipo=seccess");
         } catch (\Exception $ex) {
-            //dd($ex);
+            dd($ex);
             return redirect("admin/categoria?mensaje=Ocurrio un error al crear la categoria&tipo=error");
         }
     }
@@ -83,8 +82,7 @@ class CategoriaController extends Controller {
     public function edit($id) {
         //mostramos el formulario apra actualizar
         $datos = array(
-            "categoria" => Categoria::find($id),
-            "categorias" => Categoria::all()
+            "categoria" => Categoria::find($id)
         );
         return view("admin.categoria.edit", $datos);
     }
@@ -98,16 +96,12 @@ class CategoriaController extends Controller {
      */
     public function update(Request $request, $id) {
         try {
-            //actualizamos la categotia
-            //buscamos la categoria
             $categoria = Categoria::find($id);
-            $categoria->nombre = $request->nombre;
-            $categoria->descripcion = $request->descripcion;
-            $categoria->padre = $request->padre;
+            $categoria->name = $request->nombre;
             if ($categoria->save()) {
-                return redirect("categoria?mensaje=Se actualizo la categoria&tipo=success");
+                return redirect("admin/categoria?mensaje=Se actualizo la categoria&tipo=success");
             } else {
-                return redirect("categoria?mensaje=No se actualizo la categoria&tipo=warining");
+                return redirect("admin/categoria?mensaje=No se actualizo la categoria&tipo=warining");
             }
         } catch (Exception $ex) {
             return redirect("categoria?mensaje=No se actualizo la categoria&tipo=error");
@@ -126,12 +120,12 @@ class CategoriaController extends Controller {
         try {
             $categoria = Categoria::find($id);
             if ($categoria->delete()) {
-                return redirect("categoria?mensaje=Se elimino con exito&tipo=success");
+                return redirect("admin/categoria?mensaje=Se elimino con exito&tipo=success");
             } else {
-                return redirect("categoria?mensaje=No se elimino con exito&tipo=warining");
+                return redirect("admin/categoria?mensaje=No se elimino con exito&tipo=warining");
             }
         } catch (Exception $ex) {
-            return redirect("categoria?mensaje=Ocurrio un error&tipo=error");
+            return redirect("admin/categoria?mensaje=Ocurrio un error&tipo=error");
         }
     }
 

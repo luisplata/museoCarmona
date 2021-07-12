@@ -2,16 +2,19 @@
 
 @section("contenido")
 <div class="col-md-12 col-sm-12 col-xs-12 text-right">
-    <a class="btn btn-primary" href="{{url('admin/producto/create')}}"><i class="fa fa-plus"></i> Crear single post</a>
-    <a class="btn btn-primary" href="{{url('admin/producto/upload')}}"><i class="fa fa-cloud"></i> Upload CSV File</a>
+    <a class="btn btn-primary" href="{{url('admin/producto/create')}}"><i class="fa fa-plus"></i> Creat Cuadro</a>
 </div>
 
 <table class="table table-striped table-hover" id="tableData">
     <thead>
       <tr>
-        <th scope="col">Nombre</th>
-        <th scope="col">Es publicado?</th>
-        <th scope="col">Fecha de publicacion</th>
+        <th scope="col">Posición</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Sub titulo</th>
+        <th scope="col">Categoria</th>
+        <th scope="col">Año</th>
+        <th scope="col">Medidas</th>
+        <th scope="col">Imagen</th>
         <th scope="col">Editar</th>
         <th scope="col">Eliminar</th>
       </tr>
@@ -19,9 +22,13 @@
     <tbody>
         @foreach($productos as $producto)
             <tr>
-                <th>{{$producto->nombre}}</th>
-                <td>{{strtotime($producto->publication_date) <= strtotime(date("Y-m-d H:i:s"))?"Si":"No"}}</td>
-                <td>{{$producto->publication_date}}</td>
+                <th>{{$producto->position}}</th>
+                <th>{{$producto->title}}</th>
+                <th>{{$producto->subtitle}}</th>
+                <td>{{$producto->categoria->name}}</td>
+                <th>{{$producto->year}}</th>
+                <th>{{$producto->medida}}</th>
+                <td onclick="OpenInPopUpImage('{{$producto->img}}')"> <span class="btn btn-default">Click Para Ver</span></td>
                 <td><a class="btn btn-primary" href="{{url("admin/producto/$producto->id/edit")}}"><i class="fa fa-edit"></i> Editar</a></td>
                 <td>{{Form::open(["url"=>"admin/producto/$producto->id","method"=>"DELETE"])}}
                     <button type="submit" class="btn btn-primary"><i class="fa fa-ellipsis-h"></i> Eliminar</button>
@@ -36,9 +43,13 @@
 <br><script src = "//cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js" defer ></script>
 <script>
     $(document).ready( function () {
-        $('#tableData').DataTable({
-        "order": [[ 2, "desc" ]]
-    });
+        /*$('#tableData').DataTable({
+        "order": [[ 0, "desc" ]]
+    });*/
     } );
+
+    function OpenInPopUpImage(imagen){
+        window.open('{{asset("/")}}'+imagen,imagen,'height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');
+    }
 </script>
 @endsection
