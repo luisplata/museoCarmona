@@ -48,7 +48,7 @@ class ProductoController extends Controller {
      */
     public function store(Request $request) {
         $fileUpdate = $request->file("pintura");
-        $directory = Storage::putFile('public', new File($fileUpdate));
+        $directory = Storage::putFile('public', new File($fileUpdate), "public");
         $directorySubString = explode("/",$directory); 
         $nameOfFile = 'storage/'.$directorySubString[1];
         //dd(asset('storage/'.$nameOfFile));
