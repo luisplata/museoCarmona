@@ -43,9 +43,9 @@
 <br><script src = "//cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js" defer ></script>
 <script>
     $(document).ready( function () {
-        /*$('#tableData').DataTable({
-        "order": [[ 0, "desc" ]]
-    });*/
+        $('#tableData').DataTable({
+        "order": [[ 0, "asc" ],[ 3, "asc" ]]
+        });
     } );
 
     function OpenInPopUpImage(imagen){
