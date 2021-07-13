@@ -27,7 +27,7 @@
                 <th>{{$producto->subtitle}}</th>
                 <td>{{$producto->categoria->name}}</td>
                 <th>{{$producto->year}}</th>
-                <th>{{$producto->medida}} {{base_path("storage/app/public/".$producto->img)}}</th>
+                <th>{{$producto->medida}}</th>
                 <td onclick="OpenInPopUpImage('{{asset($producto->img)}}')"> <span class="btn btn-default">Click Para Ver Imagen</span></td>
                 <td><a class="btn btn-primary" href="{{url("admin/producto/$producto->id/edit")}}"><i class="fa fa-edit"></i> Editar</a></td>
                 <td>{{Form::open(["url"=>"admin/producto/$producto->id","method"=>"DELETE"])}}

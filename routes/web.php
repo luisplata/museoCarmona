@@ -11,8 +11,6 @@
 |
 */
 
-Route::get("storage/{nombre?}", "ProductoController@MostrarImagen");
-
 Route::get('/','ViewsController@home')->name('home');
 Route::post('getGalery', 'ViewsController@GetGalery');
 Route::post('getExpositions', 'ViewsController@GetExpositions');

@@ -75,12 +75,26 @@ class ProductoController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
+       
+        $pathToSave = env("PATH_SAVE_IMAGES");
         $fileUpdate = $request->file("pintura");
         $directory = Storage::putFile('public', new File($fileUpdate), "public");
+
+        //initial posicion
+        $initialPath = storage_path("app/".$directory);
+
+        //final position
         $directorySubString = explode("/",$directory); 
         $nameOfFile = 'storage/'.$directorySubString[1];
-        //dd(asset('storage/'.$nameOfFile));
+        $finalpath = $pathToSave.$directorySubString[1];
 
+        if(!file_exists($pathToSave)){
+            mkdir($pathToSave,0777,true);
+        }
+
+        if(!rename($initialPath, $finalpath)){
+            return redirect("admin/producto?tipo=error&mensaje=Ocurrio Un error guardando el archivo, intentelo nuevamente; ".$ex->getMessage());
+        }
 
         try {
             $producto = new Producto();
@@ -100,8 +114,7 @@ class ProductoController extends Controller {
                 return redirect("admin/producto?2");
             }
         } catch (\Exception $ex) {
-            dd($ex);
-            return redirect("admin/producto?3");
+            return redirect("admin/producto?tipo=error&mensaje=".$ex->getMessage());
         }
     }
 
@@ -156,14 +169,42 @@ class ProductoController extends Controller {
             $producto->position = $request->position;
 
             if($request->hasFile('pintura')){
-                $split = explode("/",$producto->img);
+                /*$split = explode("/",$producto->img);
                 $path = storage_path("app/public/".$split[1]);
                 unlink($path);
 
                 $fileUpdate = $request->file("pintura");
                 $directory = Storage::putFile('public', new File($fileUpdate));
                 $directorySubString = explode("/",$directory); 
+                $nameOfFile = 'storage/'.$directorySubString[1];*/
+                
+                $pathToSave = env("PATH_SAVE_IMAGES");
+                
+                //eliminamos archivo anterior
+                $directorySubStringLastFile = explode("/",$producto->img); 
+                //dd($pathToSave.$directorySubStringLastFile[1]);
+                unlink($pathToSave.$directorySubStringLastFile[1]);
+
+                $fileUpdate = $request->file("pintura");
+                $directory = Storage::putFile('public', new File($fileUpdate), "public");
+
+                //initial posicion
+                $initialPath = storage_path("app/".$directory);
+                //dd($initialPath);
+
+                //final position
+                $directorySubString = explode("/",$directory); 
                 $nameOfFile = 'storage/'.$directorySubString[1];
+                $finalpath = $pathToSave.$directorySubString[1];
+                
+
+                if(!file_exists($pathToSave)){
+                    mkdir($pathToSave,0777,true);
+                }
+
+                if(!rename($initialPath, $finalpath)){
+                    return redirect("admin/producto?tipo=error&mensaje=Ocurrio Un error guardando el archivo, intentelo nuevamente; ".$ex->getMessage());
+                }
 
                 $producto->img = $nameOfFile;
                 $producto->modal = $nameOfFile;
@@ -191,17 +232,18 @@ class ProductoController extends Controller {
         try {
             $producto = Producto::find($id);
             if ($producto->delete()) {
-                //eliminamos el archivo
-                $split = explode("/",$producto->img);
-                $path = storage_path("app/public/".$split[1]);
-                unlink($path);
+                $pathToSave = env("PATH_SAVE_IMAGES");
+                //eliminamos archivo anterior
+                $directorySubStringLastFile = explode("/",$producto->img); 
+                //dd($pathToSave.$directorySubStringLastFile[1]);
+                unlink($pathToSave.$directorySubStringLastFile[1]);
+
                 return redirect("admin/producto?mensaje=Se elimino con exito el producto&tipo=success");
             } else {
                 return redirect("admin/producto?mensaje=No elimino con exito el producto&tipo=warining");
             }
         } catch (\Exception $ex) {
-            //dd();
-            return redirect("admin/producto?mensaje=Error&tipo=error");
+            return redirect("admin/producto?mensaje=".$ex->getMessage()."&tipo=error");
         }
     }
 
