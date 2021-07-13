@@ -8,8 +8,36 @@ use League\Csv\Reader;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Http\File;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Response;
 
 class ProductoController extends Controller {
+
+
+    public function MostrarImagen($nombreArchivo = "falso"){
+        $path = new File(storage_path("app/public/".$nombreArchivo));
+        dd($path);
+        
+        $response = Response::make($path, 200);
+        $response->header("Content-Type", "image/png");
+
+        
+        return $response;
+        //$path = Storage::disk("public")->exists($nombreArchivo);
+        $path = str_replace("\\","/",$path);
+        return response()->file($path,["image/png"]);
+        if (!file_exists($path)) {
+            $path = storage_path("app/error.jpg");
+        }
+        $myfile = fopen($path, "w");
+        $mimeType = mime_content_type($path);
+        $file = File::get($path);
+        $type = File::mimeType($path);
+
+        $response = Response::make($path, 200);
+        $response->header("Content-Type", $type);
+
+        return $response;
+    }
 
     public function Upload(){
         return view("admin.producto.upload");
