@@ -11,7 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.sass', 'public/css')
+mix.js('resources/assets/js/app.js', 'public/js').version()
+    .sass('resources/assets/sass/app.sass', 'public/css').version()
     .copy('resources/assets/images/', 'public/img');
 mix.sourceMaps().version();
