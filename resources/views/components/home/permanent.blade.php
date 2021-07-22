@@ -18,7 +18,7 @@
                                   <div class="row_2">
                                       <div class="col column">
                                           <h1>
-                                              Sitio
+                                                Ciudad
                                           </h1>
                                           <h2>
                                               {{$w->country}},
