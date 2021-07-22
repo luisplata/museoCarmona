@@ -46,7 +46,7 @@ class IntermedioLlenoDeScripsManuales extends Migration
             PRIMARY KEY (`id`)
           );");
           
-          DB::statement("INSERT INTO `icons_info` (`id`, `name`, `img`, `created_at`, `updated_at`) VALUES (1,'Correo','uploads/1/2020-10/icon_1.png','2020-10-08 01:41:41',NULL),(2,'Horario','uploads/1/2020-10/icon_2.png','2020-10-08 01:41:42',NULL),(3,'UbicaciÃ³n','uploads/1/2020-10/icon_3.png','2020-10-08 01:41:43',NULL),(4,'TelÃ©fonos','uploads/1/2020-10/icon_4.png','2020-10-08 01:41:43',NULL);");
+          DB::statement("INSERT INTO `icons_info` (`id`, `name`, `img`, `created_at`, `updated_at`) VALUES (1,'Correo','uploads/1/2020-10/icon_1.png','2020-10-08 01:41:41',NULL),(2,'Horario','uploads/1/2020-10/icon_2.png','2020-10-08 01:41:42',NULL),(3,'Ubicación','uploads/1/2020-10/icon_3.png','2020-10-08 01:41:43',NULL),(4,'Teléfonos','uploads/1/2020-10/icon_4.png','2020-10-08 01:41:43',NULL);");
           
           DB::statement("CREATE TABLE `banner` (
             `id` int(11) NOT NULL AUTO_INCREMENT,
