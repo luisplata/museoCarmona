@@ -32,7 +32,7 @@
             <div id="gallerylist">
                 <div class="slickGallery" id="sliderGallery">
                     @php
-                        $number = 8;
+                        $number = 2;
                         $cont = 0;
                         $contPlus = $number - 1;
                     @endphp
