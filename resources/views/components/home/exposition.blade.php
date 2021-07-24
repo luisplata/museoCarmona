@@ -50,8 +50,8 @@
                                 <thead>
                                     <tr>
                                         <th>Año</th>
-                                        <th>Ciudad y país</th>
-                                        <th>lugar</th>
+                                        <th>Ciudad y País</th>
+                                        <th>Lugar</th>
                                     </tr>
                                 </thead>
                                 <tbody>

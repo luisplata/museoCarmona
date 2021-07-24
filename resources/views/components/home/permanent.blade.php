@@ -11,10 +11,10 @@
                 @foreach($works as $w)
                     <div>
                           <div class="row rowTwo">
-                              <div class="col s12 m5 l5">
+                              <div class="col s12 m8 l8">
                                   <img src="{{asset($w->img)}}" alt="">
                               </div>
-                              <div class="col s12 m7 l7">
+                              <div class="col s12 m4 l4">
                                   <div class="row_2">
                                       <div class="col column">
                                           <h1>
