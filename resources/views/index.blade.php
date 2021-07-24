@@ -15,8 +15,7 @@
         'webInfo'=>$webInfo
     ])
     @endcomponent
-    @component('components.home.process',[
-         'webInfo'=>$webInfo,
+    @component('components.home.process',['webInfo'=>$webInfo,
          'imageSculpture'=>$imageSculpture
     ])
     @endcomponent
@@ -68,6 +67,16 @@
             popup1.open(map1, marker1);*/
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=CHANGE_FOR_ALL&callback=initMap" async defer>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{env('API_KEY_MAPS','AIzaSyAh-L0Yzx1_tVcQOQ4IqkncQ0mDoZ7L_Q8')}}&callback=initMap" async defer>
+    //https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=initMap&libraries=places,geometry&channel=GMPSB_locatorplus_v2_cABCDE
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNJE4S4659"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZNJE4S4659');
     </script>
 @endsection
