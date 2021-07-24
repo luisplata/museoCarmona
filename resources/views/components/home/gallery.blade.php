@@ -43,7 +43,7 @@
                         <div>
                             <div class="row_2">
                                 @if($projects[0]->subtitle == '')
-                                    <div class="column larger">
+                                    <div style='display:none' class="column larger">
                                         <h6>
                                             No hay proyectos
                                         </h6>

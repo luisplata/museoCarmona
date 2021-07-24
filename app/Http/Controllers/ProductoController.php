@@ -235,6 +235,7 @@ class ProductoController extends Controller {
                 $pathToSave = env("PATH_SAVE_IMAGES");
                 //eliminamos archivo anterior
                 $directorySubStringLastFile = explode("/",$producto->img); 
+                //dd($directorySubStringLastFile);
                 //dd($pathToSave.$directorySubStringLastFile[1]);
                 unlink($pathToSave.$directorySubStringLastFile[1]);
 

@@ -46,7 +46,7 @@
     @endcomponent
 @endsection
 @section('script')
-    <script>
+    <!--<script>
         var map1;
         function initMap() {
             map1 = new google.maps.Map(document.getElementById('map'), {
@@ -67,8 +67,25 @@
             popup1.open(map1, marker1);*/
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key={{env('API_KEY_MAPS','AIzaSyAh-L0Yzx1_tVcQOQ4IqkncQ0mDoZ7L_Q8')}}&callback=initMap" async defer>
-    //https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=initMap&libraries=places,geometry&channel=GMPSB_locatorplus_v2_cABCDE
+    <script src="https://maps.googleapis.com/maps/api/js?key={{env('API_KEY_MAPS','AIzaSyAh-L0Yzx1_tVcQOQ4IqkncQ0mDoZ7L_Q8')}}&callback=initMap" async defer></script>-->
+    <!--https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&callback=initMap&libraries=places,geometry&channel=GMPSB_locatorplus_v2_cABCDE-->
+    <script>
+        const data = null;
+
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener("readystatechange", function () {
+	if (this.readyState === this.DONE) {
+		console.log(this.responseText);
+	}
+});
+
+xhr.open("GET", "https://currency-exchange.p.rapidapi.com/exchange?to=Colombia&from=Colombia&q=asasas");
+xhr.setRequestHeader("x-rapidapi-key", "b424d149dbmsheae84bed44210c8p14f4c6jsn81c336cb857d");
+xhr.setRequestHeader("x-rapidapi-host", "currency-exchange.p.rapidapi.com");
+
+xhr.send(data);
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNJE4S4659"></script>

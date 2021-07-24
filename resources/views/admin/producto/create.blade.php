@@ -31,26 +31,26 @@
 </div>
 <div class="clearfix"></div>
 <div class="form-group">
-    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="year">Año <span class="required">*</span>
+    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="year">Año
     </label>
     <div class="col-md-6 col-sm-6 col-xs-12">
-        <input type="text" id="year" name="year" required="required" value="" class="form-control col-md-7 col-xs-12">
+        <input type="text" id="year" name="year" value="" class="form-control col-md-7 col-xs-12">
     </div>
 </div>
 <div class="clearfix"></div>
 <div class="form-group">
-    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="medida">Medidas <span class="required">*</span>
+    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="medida">Medidas
     </label>
     <div class="col-md-6 col-sm-6 col-xs-12">
-        <input type="text" id="medida" name="medida" required="required" value="" class="form-control col-md-7 col-xs-12">
+        <input type="text" id="medida" name="medida" value="" class="form-control col-md-7 col-xs-12">
     </div>
 </div>
 <div class="clearfix"></div>
 <div class="form-group">
-    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="position">Posición <span class="required">*</span>
+    <label class="control-label col-md-3 col-sm-3 col-xs-12" for="position">Posición
     </label>
     <div class="col-md-6 col-sm-6 col-xs-12">
-        <input type="text" id="position" name="position" required="required" value="" class="form-control col-md-7 col-xs-12">
+        <input type="text" id="position" name="position" value="" class="form-control col-md-7 col-xs-12">
     </div>
 </div>
 <div class="clearfix"></div>
