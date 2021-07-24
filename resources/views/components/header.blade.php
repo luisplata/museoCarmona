@@ -13,9 +13,9 @@
     <div class="nav-wrapper">
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="{{url('/')}}">Inicio</a></li>
-            <li><a class="galleryClick">Galería</a></li>
-            <li><a class="artistClick">Obras</a></li>
-            <li><a class="aboutClick">Acerca de</a></li>
+            <li><a class="galleryClick">Galería de Obras</a></li>
+            <li><a class="artistClick">Obras Permanentes</a></li>
+            <li><a class="aboutClick">Acerca del Museo</a></li>
             <li><a class="contactClick">Contacto</a></li>
             <li>
                 <a class="shop" href="{{$info->link_buy}}" target="_blank">
