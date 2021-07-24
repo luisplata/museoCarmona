@@ -2,7 +2,7 @@
     <div class="row rowOne">
         <div class="col s12">
             <h1>
-                Galería de <span>Proyectos</span>
+                Galería de <span>Obras</span>
                 <hr>
             </h1>
             <div class="row_2 rowOcult">
