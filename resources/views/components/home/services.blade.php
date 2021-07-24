@@ -1,5 +1,5 @@
 <section class="sectionServices">
-    <div class="row rowOne">
+    <div class="row rowOne hide">
         <div class="col s12 m6 l7">
             <div class="text">
                 <h1>
