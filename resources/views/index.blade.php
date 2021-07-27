@@ -53,6 +53,12 @@
         'iconsInfo'=>$iconsInfo
     ])
     @endcomponent
+
+    @component('components.home.videos',[
+        'info'=>$info,
+        'iconsInfo'=>$iconsInfo
+    ])
+    @endcomponent
     @component('components.home.newsletter')
     @endcomponent
 @endsection

@@ -1,8 +1,3 @@
-<style>
-    .element{
-        height: 300px;
-    }
-</style>
 <section class="sectionInfoHome">
     <div class="row rowOne">
         <div class="col s12 center-aling">

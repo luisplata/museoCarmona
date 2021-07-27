@@ -1,5 +1,5 @@
 <style>
-    .element{
+    #content > section:nth-child(15) > div:nth-child(2) > div{
         height: 300px;
     }
 </style>
