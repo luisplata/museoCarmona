@@ -42,6 +42,11 @@
         'iconsInfo'=>$iconsInfo
     ])
     @endcomponent
+    @component('components.home.books',[
+        'info'=>$info,
+        'iconsInfo'=>$iconsInfo
+    ])
+    @endcomponent
     @component('components.home.newsletter')
     @endcomponent
 @endsection
