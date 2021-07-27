@@ -47,6 +47,12 @@
         'iconsInfo'=>$iconsInfo
     ])
     @endcomponent
+    
+    @component('components.home.catalogo',[
+        'info'=>$info,
+        'iconsInfo'=>$iconsInfo
+    ])
+    @endcomponent
     @component('components.home.newsletter')
     @endcomponent
 @endsection
