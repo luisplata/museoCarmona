@@ -62,6 +62,7 @@
                                              @endif
                                              medida="{{$p->medida}}"
                                         >
+                                        <div class="centrado">
                                             <div class="img">
                                                 <div>
                                                     @if($keyMore == 1 )
@@ -72,7 +73,8 @@
                                                 </div>
                                             </div>
                                             <h2>
-                                                <span>{{$p->title}}</span> <br>
+                                                <span>{{$p->title}}</span> 
+                                                <br>
                                                 {{$p->subtitle}}
                                             </h2>
                                             <h3>
@@ -81,6 +83,7 @@
                                                     <img src="{{asset('img/gallery/arrow.svg')}}" alt="">
                                                 </i>
                                             </h3>
+                                            </div>
                                         </div>
                                     @endif
                                 @endforeach
