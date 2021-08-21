@@ -42,13 +42,7 @@
                     @for($j=1;$j<=ceil($projects->count()/$number);$j++)
                         <div>
                             <div class="row_2">
-                                @if($projects[0]->subtitle == '')
-                                    <div style='display:none' class="column larger">
-                                        <h6>
-                                            No hay proyectos
-                                        </h6>
-                                    </div>
-                                @endif
+                                
                                 @foreach($projects as $key => $p)
                                     @if($key >= $cont && $key <= $contPlus)
                                         <div class="col medium"
