@@ -128,12 +128,12 @@ $(document).ready(function () {
                     setTimeout(function () {
                         $('#loaderGalley').hide();
                         $('#gallerylist').show();
-                        sliderGallery();
                         $('html, body').animate({
                             scrollTop: $('#gallerylist').offset().top - 200
                         }, 1000);
                     },2000);
                 },0);
+                sliderGallery();
             }
         });
     });

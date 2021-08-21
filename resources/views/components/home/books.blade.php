@@ -1,6 +1,10 @@
 <style>
     #content > section:nth-child(15) > div:nth-child(2) > div{
-        height: 300px;
+        height: 500px;
+    }
+    .centerImages{
+        display: flex;
+        align-items: center;
     }
 </style>
 <section class="sectionInfoHome">
