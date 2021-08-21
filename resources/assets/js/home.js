@@ -31,6 +31,7 @@ $(document).ready(function () {
         nextArrow: $('.sectionAboutProcess .arrowRight'),
         prevArrow: $('.sectionAboutProcess .arrowLeft'),
     });
+    $('#imagenDeProceso').hide();
     function sliderGallery(){
         $('#sliderGallery').slick({
             dots: true,
@@ -101,6 +102,23 @@ $(document).ready(function () {
     $('.click_three_h3').click(function () {
         $(this).hide();
         $('.sectionAboutProcess .h3_3').css('height','auto');
+        $('#imagenDeProceso').show();
+        $('#slickProcessBocetos').slick({
+            dots: false,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            pauseOnHover: false,
+            pauseOnDotsHover: false,
+            pauseOnFocus: false,
+            lazyLoad: 'ondemand',
+            nextArrow: $('.sectionAboutProcess .arrowRight'),
+            prevArrow: $('.sectionAboutProcess .arrowLeft'),
+        });
     });
 
     $('#loaderGalley').hide();

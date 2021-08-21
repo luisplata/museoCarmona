@@ -1,16 +1,31 @@
 <section class="sectionAboutHome sectionAboutProcess">
     <div class="row rowOne">
         <div class="col s12 m8 l8">
-            <div class="slickProcess" id="slickProcess">
-                @foreach($imageSculpture as $i)
-                    <div>
-                        <img class="image" src="{{asset($i->img)}}" alt="">
-                    </div>
-                @endforeach
+            <div class="col s12">
+                <div class="slickProcess" id="slickProcess">
+                    @foreach($imageSculpture as $i)
+                        <div>
+                            <img class="image" src="{{asset($i->img)}}" alt="">
+                        </div>
+                    @endforeach
+                </div>
+                <div class="arrow">
+                    <img class="arrowLeft" src="{{asset('img/about/left.svg')}}" alt="">
+                    <img class="arrowRight" src="{{asset('img/about/right.svg')}}" alt="">
+                </div>
             </div>
-            <div class="arrow">
-                <img class="arrowLeft" src="{{asset('img/about/left.svg')}}" alt="">
-                <img class="arrowRight" src="{{asset('img/about/right.svg')}}" alt="">
+            <div id="imagenDeProceso">
+                <div class="col s12 processSecond">
+                    <div class="slickProcess" id="slickProcessBocetos">
+                        <div>
+                            <img class="image" src="{{asset('img/boceto1.jpg')}}" alt="">
+                        </div>
+                    </div>
+                    <div class="arrow">
+                        <img class="arrowLeft" src="{{asset('img/about/left.svg')}}" alt="">
+                        <img class="arrowRight" src="{{asset('img/about/right.svg')}}" alt="">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col s12 m4 l4">
