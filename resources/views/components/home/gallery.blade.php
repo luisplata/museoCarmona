@@ -6,12 +6,61 @@
                 <hr>
             </h1>
             <div class="row_2 rowOcult">
-                @foreach($categoryProjects as $key => $c)
-                <h1 class="{{$key == 0?'active':''}} col column" id="{{$c->id}}">
-                    {{$c->name}}
-                    <hr>
-                </h1>
-                @endforeach
+                <div class="containerCategory col column">
+                    <h1 class="column bigBit">Esculturas</h1>
+                    @foreach($categoryProjects as $key => $c)
+                        @if($c->id == 3 || $c->id == 100)
+                        <h1 class="{{$key == 0?'active':''}} col column" id="{{$c->id}}">
+                            {{$c->name}}
+                            <hr>
+                        </h1>
+                        @endif
+                    @endforeach
+                </div>
+                <div class="containerCategory col column">
+                    <h1 class="column bigBit">Pinturas</h1>
+                    @foreach($categoryProjects as $key => $c)
+                        @if($c->id == 1 || $c->id == 7)
+                        <h1 class="{{$key == 0?'active':''}} col column" id="{{$c->id}}">
+                            {{$c->name}}
+                            <hr>
+                        </h1>
+                        @endif
+                    @endforeach
+                </div>
+                <div class="containerCategory col column">
+                    <h1 class="column bigBit">DIbujos en Acero</h1>
+                    @foreach($categoryProjects as $key => $c)
+                        @if($c->id == 2 || $c->id == 8)
+                        <h1 class="{{$key == 0?'active':''}} col column" id="{{$c->id}}">
+                            {{$c->name}}
+                            <hr>
+                        </h1>
+                        @endif
+                    @endforeach
+                </div>
+                <div class="containerCategory col column">
+                    <h1 class="column bigBit">Vitroceramica</h1>
+                    @foreach($categoryProjects as $key => $c)
+                        @if($c->id == 5 || $c->id == 9)
+                        <h1 class="{{$key == 0?'active':''}} col column" id="{{$c->id}}">
+                            {{$c->name}}
+                            <hr>
+                        </h1>
+                        @endif
+                    @endforeach
+                </div>
+                <div class="containerCategory col column">
+                    <h1 class="column bigBit">Jarrones</h1>
+                    @foreach($categoryProjects as $key => $c)
+                        @if($c->id == 4 || $c->id == 4)
+                        <h1 class="{{$key == 0?'active':''}} col column" id="{{$c->id}}">
+                            {{$c->name}}
+                            <hr>
+                        </h1>
+                        @endif
+                    @endforeach
+                </div>
             </div>
             <select class="browser-default">
                 @foreach($categoryProjects as $key => $c)
