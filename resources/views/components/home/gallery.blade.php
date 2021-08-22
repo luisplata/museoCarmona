@@ -7,7 +7,7 @@
             </h1>
             <div class="row_2 rowOcult">
                 <div class="containerCategory col column">
-                    <h1 class="column bigBit">Esculturas</h1>
+                    <h1 class="column bigBit">Escultura</h1>
                     @foreach($categoryProjects as $key => $c)
                         @if($c->id == 3 || $c->id == 100)
                         <h1 class="{{$key == 0?'active':''}} col column" id="{{$c->id}}">
@@ -18,7 +18,7 @@
                     @endforeach
                 </div>
                 <div class="containerCategory col column">
-                    <h1 class="column bigBit">Pinturas</h1>
+                    <h1 class="column bigBit">Pintura</h1>
                     @foreach($categoryProjects as $key => $c)
                         @if($c->id == 1 || $c->id == 7)
                         <h1 class="{{$key == 0?'active':''}} col column" id="{{$c->id}}">
@@ -29,7 +29,7 @@
                     @endforeach
                 </div>
                 <div class="containerCategory col column">
-                    <h1 class="column bigBit">DIbujos en Acero</h1>
+                    <h1 class="column bigBit">Dibujo en Acero</h1>
                     @foreach($categoryProjects as $key => $c)
                         @if($c->id == 2 || $c->id == 8)
                         <h1 class="{{$key == 0?'active':''}} col column" id="{{$c->id}}">
