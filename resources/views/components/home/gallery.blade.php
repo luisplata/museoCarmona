@@ -31,7 +31,7 @@
                 <div class="containerCategory col column">
                     <h1 class="column bigBit">Dibujo en Acero</h1>
                     @foreach($categoryProjects as $key => $c)
-                        @if($c->id == 2 || $c->id == 8)
+                        @if($c->id == 2 || $c->id == 8  || $c->id == 300)
                         <h1 class="{{$key == 0?'active':''}} col column" id="{{$c->id}}">
                             {{$c->name}}
                             <hr>
