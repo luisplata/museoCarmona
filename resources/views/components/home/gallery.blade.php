@@ -61,6 +61,11 @@
                         @endif
                     @endforeach
                 </div>
+                <div class="containerCategory col column">
+                    <h1 class="column bigBit" id="200">Mural</h1>
+                    <h1 class="{{$key == 0?'active':''}} col column" id="200"><hr>
+                    </h1>
+                </div>
             </div>
             <select class="browser-default">
                 @foreach($categoryProjects as $key => $c)
@@ -108,11 +113,7 @@
                                         <div class="centrado">
                                             <div class="img">
                                                 <div>
-                                                    @if($keyMore == 1 )
-                                                        <img src="{{asset($p->img)}}" alt="">
-                                                    @else
-                                                        <img data-lazy="{{asset($p->img)}}" alt="">
-                                                    @endif
+                                                    <img src="{{asset($p->img)}}" alt="">
                                                 </div>
                                             </div>
                                             <h2>

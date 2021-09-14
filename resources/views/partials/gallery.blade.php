@@ -27,11 +27,7 @@
                         <div class="centrado">
                             <div class="img">
                                 <div>
-                                    @if($keyMore == 1 )
-                                        <img src="{{asset($p->img)}}" alt="">
-                                    @else
-                                        <img data-lazy="{{asset($p->img)}}" alt="">
-                                    @endif
+                                    <img src="{{asset($p->img)}}" alt="">
                                 </div>
                             </div>
                             <h2>

@@ -33,7 +33,7 @@ $(document).ready(function () {
     });
     $('#imagenDeProceso').hide();
     function sliderGallery(){
-        $('#sliderGallery').slick({
+        /*$('#sliderGallery').slick({
             dots: true,
             infinite: true,
             slidesToShow: 1,
@@ -46,7 +46,7 @@ $(document).ready(function () {
             pauseOnDotsHover: false,
             pauseOnFocus: false,
             lazyLoad: 'ondemand',
-        });
+        });*/
         $('#sliderGallery .medium').click(function () {
             //$('#modalGallery .image').css('background-image', 'url('+$(this).attr('image')+')');
             $('#modalGallery img').attr('src',$(this).attr('image'));
