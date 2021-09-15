@@ -6,10 +6,10 @@
             </a>
         </li>
     </ul>
-    <a href="{{Route('home')}}" class="brand-logo">
+    <!--<a href="{{Route('home')}}" class="brand-logo">
         <img class="logo_white" src="{{asset('img/header/logo.svg')}}" alt="">
         <img class="logo_blue" src="{{asset('img/header/logo.svg')}}" alt="">
-    </a>
+    </a>-->
     <div class="nav-wrapper">
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="{{url('/')}}">Inicio</a></li>
@@ -17,11 +17,11 @@
             <li><a class="artistClick">Obras Permanentes</a></li>
             <li><a class="aboutClick">Acerca del Museo</a></li>
             <li><a class="contactClick">Contacto</a></li>
-            <li>
+            <!--<li>
                 <a class="shop" href="{{$info->link_buy}}" target="_blank">
                     <h6>Compra Aquí</h6>
                 </a>
-            </li>
+            </li>-->
             <li class="li">
                 <a href="{{$info->facebook}}" target="_blank">
                     <img class="redes face" src="{{asset('img/header/face.svg')}}" alt="">
